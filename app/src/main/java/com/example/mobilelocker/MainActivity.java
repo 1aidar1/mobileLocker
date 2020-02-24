@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnSetPassword = findViewById(R.id.setPasswordBtn);
-        //Save Current Symbols 
+        //Save Current Symbols sda
     }
 
     public void btnSetPasswordClick(View view){
