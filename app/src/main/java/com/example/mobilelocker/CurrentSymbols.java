@@ -14,7 +14,7 @@ public class CurrentSymbols {
     private static final ArrayList<String> chessandcard;
 
     static {
-        Log.e("LOG","ASSDASDASDASDA");
+        Log.i("LOG","Current Symbol created");
         currentSymbols = new ArrayList<>();
 
         greek = new ArrayList<>();

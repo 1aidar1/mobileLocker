@@ -2,6 +2,7 @@ package com.example.mobilelocker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -11,6 +12,8 @@ import java.util.Collections;
 
 public class LockerActivity extends AppCompatActivity {
 
+    public static final String SAVE = "SAVE";
+    public static final String PASSWORD = "PASSWORD";
     private Button btn1;
     private Button btn2;
     private Button btn3;
@@ -21,7 +24,7 @@ public class LockerActivity extends AppCompatActivity {
     private Button btn8;
     private Button btn9;
 
-
+    SharedPreferences save;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,9 @@ public class LockerActivity extends AppCompatActivity {
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
 
+        save  =getSharedPreferences(SAVE,MODE_PRIVATE);
+        String s = save.getString(PASSWORD,""   );
+        Log.i("LOG","CURRENT PASSWORD: "+s);
         shuffle();
     }
 
@@ -45,6 +51,7 @@ public class LockerActivity extends AppCompatActivity {
         ArrayList s = CurrentSymbols.getCurrent();
         Log.i("LOG",s.toString());
         Collections.shuffle(s);
+
         Log.i("LOG", s.toString());
         btn1.setText(s.get(0).toString());
         btn2.setText(s.get(1).toString());
