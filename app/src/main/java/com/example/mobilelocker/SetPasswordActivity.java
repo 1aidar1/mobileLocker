@@ -100,34 +100,36 @@ public class SetPasswordActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn1:
-                inputPassword +=btn1.getText().toString();
-                break;
-            case R.id.btn2:
-                inputPassword +=btn2.getText().toString();
-                break;
-            case R.id.btn3:
-                inputPassword +=btn3.getText().toString();
-                break;
-            case R.id.btn4:
-                inputPassword +=btn4.getText().toString();
-                break;
-            case R.id.btn5:
-                inputPassword +=btn5.getText().toString();
-                break;
-            case R.id.btn6:
-                inputPassword +=btn6.getText().toString();
-                break;
-            case R.id.btn7:
-                inputPassword +=btn7.getText().toString();
-                break;
-            case R.id.btn8:
-                inputPassword +=btn8.getText().toString();
-                break;
-            case R.id.btn9:
-                inputPassword +=btn9.getText().toString();
-                break;
+        if (inputPassword.length()<Password.maxChars){
+            switch (v.getId()){
+                case R.id.btn1:
+                    inputPassword +=btn1.getText().toString();
+                    break;
+                case R.id.btn2:
+                    inputPassword +=btn2.getText().toString();
+                    break;
+                case R.id.btn3:
+                    inputPassword +=btn3.getText().toString();
+                    break;
+                case R.id.btn4:
+                    inputPassword +=btn4.getText().toString();
+                    break;
+                case R.id.btn5:
+                    inputPassword +=btn5.getText().toString();
+                    break;
+                case R.id.btn6:
+                    inputPassword +=btn6.getText().toString();
+                    break;
+                case R.id.btn7:
+                    inputPassword +=btn7.getText().toString();
+                    break;
+                case R.id.btn8:
+                    inputPassword +=btn8.getText().toString();
+                    break;
+                case R.id.btn9:
+                    inputPassword +=btn9.getText().toString();
+                    break;
+            }
         }
         passwordView.setText(inputPassword);
     }
