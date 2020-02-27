@@ -87,7 +87,7 @@ public class LockerActivity extends AppCompatActivity implements View.OnClickLis
 
     public void checkPassword(){
         if (inputPassword.length()>=Password.maxChars){
-            
+            //tTEST
         }
     }
 
